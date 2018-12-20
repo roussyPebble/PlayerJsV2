@@ -1,0 +1,30 @@
+.rcplayer-container {
+    .thumbnail-background {
+        width: 100%;
+        position: absolute;
+        .thumbnail-preload{
+            display: none;
+        }
+        .thumbnail-container {
+            display: none;
+            position: absolute;
+            width: var(--thumbnail-container-width);
+            height: var(--thumbnail-container-height);
+            font-size: 13px;
+            bottom: 16%;
+            z-index: 2;
+            background-color: #000000;
+            &.active {
+                display: block;
+            }
+            .thumbnailImg {
+                width: var(--thumbnail-img-width);
+                height: var(--thumbnail-img-height);
+            }
+            .thumbnailLabel {
+                color: #ffffff;
+                text-align: center;
+            }
+        }
+    }
+}

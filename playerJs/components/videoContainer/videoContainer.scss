@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "playerLoadedFont";
+    src: url('//s.radio-canada.ca/player/svg/ressources/font/Radio-Canada-Regular.woff'); 
+
+}
+@font-face {
+    font-family: "playerLoadedFont";
+    src: url('//s.radio-canada.ca/player/svg/ressources/font/Radio-Canada-Bold.woff');
+    font-weight: bold;
+}
+
+.rcplayer-container {
+    font-family: 'playerLoadedFont';
+    font-size: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    * {
+        outline: none;
+        font-size: inherit;
+    }
+    .a11y-focus {
+        outline:  2px solid #0068c5;
+        &:focus {
+            background-color: #000000;
+        }
+    }
+}

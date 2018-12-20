@@ -1,0 +1,91 @@
+$volume-width: 7.5em;
+$thumb-size: 15px;
+$thumb-border-radius: 50%;
+$thumb-color: #E9E9E9;
+$track-height: 5px;
+$track-color: #808080;
+
+@mixin thumb{
+  border: none;
+  width: $thumb-size;
+  height: $thumb-size;
+  border-radius: $thumb-border-radius;
+  background: $thumb-color;
+  cursor: ew-resize;
+}
+
+@mixin track{
+  height: $track-height;
+  background: $track-color;
+}
+
+.volume-slider {
+    display: flex;
+    -webkit-appearance: none;
+    -moz-apperance: none;
+    border: none;
+    transition: all 400ms linear;
+    cursor: pointer;
+
+    &.volume-slider--open {
+        width: $volume-width;
+        height: $thumb-size;
+        opacity: 1;
+    }
+
+    &.volume-slider--close {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    @at-root {
+        input[type='range']#{&} {
+            padding: 0;
+            height: 1em;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        input[type='range']#{&},
+        input[type='range']#{&}::-webkit-slider-runnable-track,
+        input[type='range']#{&}::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+
+        input[type='range']#{&}::-webkit-slider-runnable-track {
+            @include track();
+        }
+
+        input[type='range']#{&}::-moz-range-track {
+            @include track();
+        }
+
+        input[type='range']#{&}::-ms-track,
+        input[type='range']#{&}::-ms-fill-lower {
+            @include track();
+        }
+
+        input[type='range']#{&}::-ms-tooltip,
+        input[type='range']#{&}::-ms-fill-upper {
+            display: none;
+        }
+
+        input[type='range']#{&}::-webkit-slider-thumb {
+            @include thumb();
+            margin-top: -4.5px;
+        }
+
+        input[type='range']#{&}::-moz-range-thumb {
+            @include thumb();
+            margin-top: -7px;
+        }
+
+        input[type='range']#{&}::-ms-thumb {
+            @include thumb();
+            margin-top: 1px;
+        }
+    }
+}

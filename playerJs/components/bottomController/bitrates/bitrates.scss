@@ -1,0 +1,53 @@
+.rcplayer-container {
+    .bitrateContainer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0 1%;
+        .bitratesBtn {
+            background: transparent;
+            border-radius: 13%;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 2px 4px;
+            cursor: pointer;
+            &:hover {
+                background-color: #000000;
+            }
+            &.wait {
+                animation: flick 1.2s ease-in-out infinite;
+            }
+        }
+        .bitrateMenu {
+            padding: 0;
+            margin: 0;
+            bottom: 0;
+            position: absolute;
+            display: none;
+            li { list-style: none;}
+            .bitrates-options {
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #ffffff;
+                border: none;
+                border-radius: 13%;
+                padding: 2px 4px;
+                margin-bottom: 2px;
+                opacity: 0.7;
+                cursor: pointer;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@keyframes flick {
+    30% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

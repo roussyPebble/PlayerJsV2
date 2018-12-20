@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PlayerJs - Test for none react page</title>
+    
+</head>
+<body>
+    <div style="max-width: 700px;">
+        <div id="video-element" style="width: 100%;"></div>
+    </div>
+    
+    <!-- To test using the static file -->
+     <script src="../../build/dev/latest/js/dist.js"></script>
+    
+    <!-- To test using the dev test server -->
+     <!--<script src="/dev/latest/js/dist.js"></script>-->
+    
+    <!-- To test using the static file server -->
+    <!-- <script src="http://localhost:8080/playerjs/dev/js/0.1.0/dist.js"></script> -->
+    
+    <script>
+        window.onload = function initPlayer() {
+            var params = {
+                autoplay: true,
+                canReduce: false,
+				heartbeat: true
+            };
+            //var player1 = RadioCanadaPlayer.initPlayerJs('video-element', '7707360', 'medianet', params);
+            var player = RadioCanadaPlayer.initPlayerJs('video-element', '26', 'medianetlive', params);
+        };
+    </script>
+</body>
+</html>
+
+<!-- 
+    RDI sport => 
+        appCode: "medianet",
+        idMedia: "7834355"
+        
+    Decouverte =>
+        appCode: "medianet",
+        idMedia: "7707360"
+    
+    Live cbft montreal =>
+        appCode: "medianetlive",
+        idMedia: "26" "39"
+
+ -->

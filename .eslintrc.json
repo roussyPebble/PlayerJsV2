@@ -1,0 +1,54 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-unused-vars": ["error"],
+        "no-undef": ["error"],
+        "no-console": ["warn"],
+        "no-empty-function": ["error"],
+        "no-new-func": ["error"],
+        "require-await": ["error"],
+        "array-bracket-spacing": ["error", "never"],
+        "block-spacing": "error",
+        "brace-style": "error",
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "computed-property-spacing": ["error", "never"],
+        "func-call-spacing": ["error", "never"],
+        "no-multi-assign": "error",
+        "no-multiple-empty-lines": "error",
+        "no-trailing-spaces": "error",
+        "keyword-spacing": "error",
+        "no-underscore-dangle": "error",
+        "no-unneeded-ternary": "error",
+        "prefer-template": "error",
+        "rest-spread-spacing": ["error", "never"],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "nonblock-statement-body-position": "error",
+        "key-spacing" :  ["warn", { "beforeColon" : false, "afterColon" : true }]
+    },
+    "overrides": [
+        {
+            "files": "*.test.js",
+            "env": {
+                "jest": true
+            }
+        }
+    ]
+}

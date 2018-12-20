@@ -1,0 +1,47 @@
+.big-play-btn {
+    $btnSize: 25%;
+    position: absolute;
+    width: $btnSize;
+    height: 0;
+    padding-bottom: $btnSize;
+    background-color: #000000;
+    border-radius: 50%;
+    border: none;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    transition: all 400ms;
+    z-index: 2;
+    cursor: pointer;
+    svg {
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        top: 21%;
+        left: 26%;
+    }
+    
+    &:hover, &:focus {
+        transform: scale(0.85);
+    }
+    
+    &:focus {
+        outline:  2px solid #0068c5;
+    }
+
+    &:active {
+        transform: scale(1.45);
+        transition: transform 500ms;
+        outline:  none;
+    }
+    
+    &.hide {
+        opacity: 0;
+        display: none;
+    }
+    
+    &.show {
+        opacity: 1;
+        display: flex;
+    }
+}

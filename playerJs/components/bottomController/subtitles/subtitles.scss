@@ -1,0 +1,21 @@
+.subtitleBtn {
+    &.hide {
+        display: none !important;
+    }
+    &Showing{
+        .player-subtitles-on{
+            display: block;
+        }
+        .player-subtitles-off{
+            display: none;
+        }
+    }
+    &Hidden{
+        .player-subtitles-on{
+            display: none;
+        }
+        .player-subtitles-off{
+            display: block;
+        }
+    }
+}
